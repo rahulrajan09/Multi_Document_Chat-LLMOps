@@ -26,5 +26,5 @@ def load_config(config_path:str| None = None) -> dict:
         raise FileNotFoundError(f"config file not found:{path}")
     
     with open(path,"r",encoding="utf-8") as f:
-        yaml.safe_load(f) or {}         # opening yaml file in safe mode if nothing present provide empty dict
+        return yaml.safe_load(f) or {}         # opening yaml file in safe mode if nothing present provide empty dict
     
